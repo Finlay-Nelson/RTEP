@@ -1,0 +1,12 @@
+// Introducing an existing version of "snake" in C++ that will be adapted to accept EMG input control
+
+sudo apt-get install libsfml-dev
+git clone https://github.com/jsyqrt/games.git
+
+cd games
+cd 04\ Snake/
+
+g++ -std=c++11 -c main.cpp # to compile.
+g++ main.o -o main.exe -lsfml-graphics -lsfml-window -lsfml-system
+
+./main.exe
