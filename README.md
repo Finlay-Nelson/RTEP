@@ -21,7 +21,7 @@ The output from the amplifiers is sent to an Analogue/Digital Converter (ADC) an
 **PROGRESS** 
 
 We have produced a working board with the AD7705 that reads a stream of data to plot, while we fabricate and test the EMG board. A successful QT program for realtime plotting has been produced, the basis of which is presented using "window.cpp". 
-=======================================================================================
+
 The chosen ADC has been changed from the AD7705 to the ADS1115, and can now read real time data using I2C. A version of Pong now runs based on input to the ADC, and displays on Android devices, transferring data via the User Datagram Protocol (UDP)
 
 Only thing left to do is get some muscle signals!
