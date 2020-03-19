@@ -1,49 +1,27 @@
 # RTEP
-A github to demonstrate workings of Real Time Embedded (RTE) project at the University of Glasgow. 
 
-"Employ EMG as a method of user input to a gaming environment”
+"EMG as user input to a gaming environment using a Raspberry Pi”
 
-**The aim**
+**PROJECT AIMS**
 
-The general aim of this project is to develop a system which detects EMG signals from the bicep and tricep muscles and use these signal to innervate movement in a video game. **Get your flex on!**
+As part of the Real Time Embedded Programming course offered by the Engineering Department at the University of Glasgow, the remit of this project is the development, design, construction and promotion of a product requiring realtime operation. To this end, we aim to develop a system which uses electromyography (EMG) to read signals from select muscles, and use them to control the movement of an object in a video game. This system has two primary proposed uses:
 
-Firstly we aim to hack simple, existing games as a proof of concept. We can then develop our own, or hack more complicated games. The more more stuff going on in a game, the better it must be! No?
+1) A greater level of submersion of the user in the gaming environment, adding an extra dimension to the experience.
+2) With development, the system could be used to encourage persistence with otherwise unpleasant rehabilitative exercise programs.
 
+The system will turn the gamer into their own controller, and therefore, a less complicated game with fewer potential inputs is easier to both produce and play. We aim to first achieve this in a simple system, using only 2 inputs (left/right) to a rudimentary game such as the retro classic "Pong", validating the concept. Further work would then look to add a greater range of control options (up/down/jump etc) to more complex games, by incorporating the EMG signals from more muscles. 
 
-**Methodology**
+**METHDOLOGY**
 
-The methodology is to use two standard Ag/AgCl electrodes placed 20cm apart on the muscle.
+Two standard Ag/AgCl electrodes should be placed approximately 20cm apart on the muscle.
 The signal from these electrodes is sent through a two stage amplifer, the first stage being the differential stage, 
-the second being a gain stage. The output of the amplifier is sent to an ADC and then passed to a Raspberry Pi via I2C data protocol for post-processing and game connection. 
+the second being a gain stage. 
+The output from the amplifiers is sent to an Analogue/Digital Converter (ADC) and then passed to a Raspberry Pi via the I2C bus protocol for post-processing and game connection. 
 
-**Potential Uses**
+**PROGRESS** 
 
-The primary use of this system is to increase the submersion effect of the player into a virtual envinroment.
-
-The system also has uses in the field of rehabilitation, and could be used to encourage otherwise unpleasent rehabilitation programs.
-
-This system could be used in combination with FES stimulation to assist those with muscular or neuronal pathologies.
-
-
-
-
-
-
-**Progress** 
-
-We've achieved a working AD7705 pcb to read in a stream of data to start plotting whilst the EMG pcb is being fabricated and tested.
-
-A realtime Qt plot has been acheived, the basis of the plot is presented with window.cpp. 
-
-The EMG adc has been selected as is getting implemented onto a custom pcb for 4 channel EMG recording.
-
-
+We have produced a working board with the AD7705 that reads a stream of data to plot, while we fabricate and test the EMG board. A successful QT program for realtime plotting has been produced, the basis of which is presented using "window.cpp". 
 =======================================================================================
-
-We've swapped ADC's to the ads1115 and are reading in rt data from all channels using i2c.
-
-The game is now fully functional and displays on android devices via UDP data transfer.
-
-The game responds to changes in signal from the ADC.
+The chosen ADC has been changed from the AD7705 to the ADS1115, and can now read real time data using I2C. A version of Pong now runs based on input to the ADC, and displays on Android devices, transferring data via the User Datagram Protocol (UDP)
 
 Only thing left to do is get some muscle signals!
