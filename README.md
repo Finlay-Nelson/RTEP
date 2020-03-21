@@ -1,4 +1,4 @@
-# RTEP
+# Muscle Power Gaming: Get Flexing!
 A github to demonstrate workings of Real Time Embedded (RTE) project at the University of Glasgow. 
 
 "Employ EMG as a method of user input to a gaming environment”
@@ -49,3 +49,5 @@ The game is now fully functional and displays on android devices via UDP data tr
 The game responds to changes in signal from the ADC.
 
 Only thing left to do is get some muscle signals!
+
+Below are the links to our Facebook and Twitter pages where you can follow all the latest and most exciting updates to the Muscle Power Gaming Project
